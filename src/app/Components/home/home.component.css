@@ -1,0 +1,16 @@
+#myCarousel{
+    color: white;
+}
+.carousel-item{
+    height: 32rem;
+    background: #777;
+    
+    position: relative;
+}
+.container{
+position: absolute;
+right:0;
+left: 70;
+bottom:0;
+padding-bottom: 200px;
+}
