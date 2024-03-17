@@ -7,3 +7,22 @@ margin: 50px;
 .iconheading{
     margin-top: 20px;
 }
+.feature-heading{
+    padding: 50px 70px 30px 100px;
+}
+.lead{
+    padding: 0px 100px;
+    margin-bottom: 50px;
+}
+
+.feature-divider{
+    margin: 100px 50px 50px;
+}
+/* .featureimg{
+    width: 30px;
+    height: 30px;
+
+} */
+.iconheading{
+    color: rgb(2, 2, 22);
+}

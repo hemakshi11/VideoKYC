@@ -1,0 +1,11 @@
+.icon{
+    height: 25px;
+    margin: 0px 20px;
+   
+}
+.whole{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}

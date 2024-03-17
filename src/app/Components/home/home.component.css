@@ -1,16 +1,28 @@
+
 #myCarousel{
     color: white;
 }
 .carousel-item{
-    height: 32rem;
-    background: #777;
-    
+    height: 100vh;
+    background: rgb(2, 2, 22);
     position: relative;
 }
 .container{
+    color: white;
 position: absolute;
-right:0;
-left: 70;
+text-align: right;
+padding-right: 20%;
+left: 300px;
 bottom:0;
 padding-bottom: 200px;
 }
+
+.bgimg{
+    position: absolute;
+    left: 9%;
+    top: 15% ;
+    opacity: 50%;
+    height: 400px;
+   
+}
+

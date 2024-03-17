@@ -1,4 +1,15 @@
-form {
-    display: block;
-    margin-top: 0em;
+
+.full{
+    background-color: rgb(2, 2, 22);
+    color: white;
+    padding: 100px 0px 90px 0px;
+
+}
+
+.fullcontact{
+    display: flex;
+
+}
+.contactus{
+    margin: 5%;
 }
