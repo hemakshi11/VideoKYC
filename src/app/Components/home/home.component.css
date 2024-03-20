@@ -1,28 +1,33 @@
-
-#myCarousel{
-    color: white;
+#myCarousel {
+  color: white;
 }
-.carousel-item{
-    height: 100vh;
-    background: rgb(2, 2, 22);
-    position: relative;
+.carousel-item {
+  height: 100vh;
+  background: rgb(66, 66, 155);
+  position: relative;
 }
-.container{
-    color: white;
-position: absolute;
-text-align: right;
-padding-right: 20%;
-left: 300px;
-bottom:0;
-padding-bottom: 200px;
-}
-
-.bgimg{
-    position: absolute;
-    left: 9%;
-    top: 15% ;
-    opacity: 50%;
-    height: 400px;
-   
+.container {
+  color: white;
+  position: absolute;
+  text-align: right;
+  padding-right: 20%;
+  left: 300px;
+  bottom: 0;
+  padding-bottom: 200px;
 }
 
+.bgimg {
+  position: absolute;
+  left: 9%;
+  top: 15%;
+  opacity: 30%;
+  height: 400px;
+}
+.iconheading {
+  margin-top: 20px;
+  color: rgb(2, 2, 22);
+}
+.row3 {
+  margin: 3%;
+  padding: 50px;
+}
