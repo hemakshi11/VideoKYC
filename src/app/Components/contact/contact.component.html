@@ -11,26 +11,26 @@
     </div>
 
     <div class="container">
-      <form method="POST" action="https://getform.io/f/pagxyjwb">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Name</label>
-          <input type="text" class="form-control" name="name" />
+      <form (ngSubmit)="submit()">
+        <div class="mb-3 form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" ngModel/>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input type="email" class="form-control" name="name" />
+        <div class="mb-3 form-group">
+          <label for="email" class="form-label"
+            >Email address</label>
+          <input type="email" class="form-control" id="email" ngModel />
         </div>
-        <div class="form-floating">
+        <div class="form-floating form-group">
           <p>Message</p>
           <textarea
             class="form-control"
-            name="name"
+           
             placeholder="Leave a comment here"
             id="theTextArea"
             style="height: 100px"
-          ></textarea>
+            ngModel
+           ></textarea>
         </div>
         <br />
         <button type="submit" class="btn btn-success">Submit</button>
