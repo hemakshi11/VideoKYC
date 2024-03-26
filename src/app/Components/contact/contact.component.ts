@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { FormBuilder,FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { empty } from 'rxjs';
 
 
 
@@ -29,7 +30,13 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(){
-    this.messageary=JSON.parse(localStorage.getItem('message')!);
+    // localStorage.clear();
+    if(localStorage.getItem('message')!=null){
+      this.messageary=JSON.parse(localStorage.getItem('message')!);
+    }else{
+      this.messageary=[];
+    }
+    
   
     // console.log(this.myForm.value);
     
