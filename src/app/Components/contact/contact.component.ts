@@ -16,12 +16,9 @@ export class ContactComponent implements OnInit {
   myForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder){}
-  messageary=[];
-  messageobj={
-    name:"",
-    email:"",
-    message:""
-  }
+
+
+  messageary:Array<{username:string, email: string, message:string}> =[];
 
   ngOnInit() {
     this.myForm = this.formBuilder.group({
@@ -32,16 +29,26 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(){
-    this.messageobj.name=(this.myForm.value.username);
-    this.messageobj.email=(this.myForm.value.email);
-    this.messageobj.message=(this.myForm.value.message);
+    this.messageary=JSON.parse(localStorage.getItem('message')!);
+  
+    // console.log(this.myForm.value);
+    
+    this.messageary.push(this.myForm.value);
+
     // this.messageary.push(this.messageobj);
     // console.log(this.messageary);
-    localStorage.setItem('message',JSON.stringify(this.messageobj));
-    console.log(localStorage.getItem('message'));
-    this.messageary.push(localStorage.getItem('message'));
-    // this.messageary.push(JSON.parse(c));
-    alert("Form submitted");
+    
+
+    localStorage.setItem('message',JSON.stringify(this.messageary));
+
+    
+    console.log(this.messageary);
+ 
+    
+
+
+
+    // alert("Form submitted");
     this.myForm.reset()
   }
 }
