@@ -11,31 +11,34 @@
     </div>
 
     <div class="container">
-      <form (ngSubmit)="submit()">
-        <div class="mb-3 form-group">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" ngModel/>
+         
+
+
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+       
+        
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label> <br>
+          <input style="width: 400px" type="text" formControlName="username" id="name" >
         </div>
-        <div class="mb-3 form-group">
-          <label for="email" class="form-label"
-            >Email address</label>
-          <input type="email" class="form-control" id="email" ngModel />
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label> <br>
+          <input style="width: 400px" type="email" formControlName="email" id="email" >
         </div>
-        <div class="form-floating form-group">
+        <div class="form-floating">
           <p>Message</p>
           <textarea
             class="form-control"
-           
+            formControlName="message"
             placeholder="Leave a comment here"
-            id="theTextArea"
-            style="height: 100px"
-            ngModel
+            id="message"
+            style="height: 100px; width: 400px;"
+            
            ></textarea>
         </div>
-        <br />
-        <button type="submit" class="btn btn-success">Submit</button>
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
       </form>
-         
     </div>
   </div>
 </div>
