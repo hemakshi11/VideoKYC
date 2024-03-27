@@ -27,7 +27,10 @@
   margin-top: 20px;
   color: rgb(2, 2, 22);
 }
-.row3 {
+.row {
+  text-align: justify;
   margin: 3%;
-  padding: 50px;
+}
+.pros{
+  padding: 3%;
 }
