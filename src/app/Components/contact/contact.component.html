@@ -12,16 +12,16 @@
 
     <div class="container">
          
-      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()" ngNativeValidate>
        
         
         <div class="mb-3">
           <label for="name" class="form-label">Name</label> <br>
-          <input style="width: 400px" type="text" formControlName="username" id="name" >
+          <input style="width: 400px" type="text" formControlName="username" id="name" required/>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label> <br>
-          <input style="width: 400px" type="email" formControlName="email" id="email" >
+          <input style="width: 400px" type="email" formControlName="email" id="email" required>
         </div>
         <div class="form-floating">
           <p>Message</p>

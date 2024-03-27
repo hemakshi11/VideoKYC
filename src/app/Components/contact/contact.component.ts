@@ -1,7 +1,7 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
-import { FormBuilder,FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { empty } from 'rxjs';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -16,46 +16,44 @@ export class ContactComponent implements OnInit {
 
   myForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder){}
+  constructor(private formBuilder: FormBuilder) { }
 
 
-  messageary:Array<{username:string, email: string, message:string}> =[];
+  messageary: Array<{ username: string, email: string, message: string }> = [];
 
   ngOnInit() {
     this.myForm = this.formBuilder.group({
       username: [''],
-      email:[''],
-      message:['']
+      email: [''],
+      message: ['']
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     // localStorage.clear();
-    if(localStorage.getItem('message')!=null){
-      this.messageary=JSON.parse(localStorage.getItem('message')!);
-    }else{
-      this.messageary=[];
+    if (localStorage.getItem('message') != null) {
+      this.messageary = JSON.parse(localStorage.getItem('message')!);
+    } else {
+      this.messageary = [];
     }
-    
-  
+
     // console.log(this.myForm.value);
-    
+
     this.messageary.push(this.myForm.value);
 
     // this.messageary.push(this.messageobj);
     // console.log(this.messageary);
-    
 
-    localStorage.setItem('message',JSON.stringify(this.messageary));
 
-    
+    localStorage.setItem('message', JSON.stringify(this.messageary));
+
+
     console.log(this.messageary);
- 
-    
 
 
 
-    // alert("Form submitted");
+
+    alert("Form submitted!! Thank you for contacting us.");
     this.myForm.reset()
   }
 }
